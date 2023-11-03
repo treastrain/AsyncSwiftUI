@@ -7,3 +7,62 @@
 [![Twitter: @treastrain](https://img.shields.io/twitter/follow/treastrain?label=%40treastrain&style=social)](https://twitter.com/treastrain)
 
 Wrappers for Swift Concurrency asynchronous actions on controls that enable user interaction specific to each platform and context provided by SwiftUI.
+
+It's based on the following post: https://zenn.dev/treastrain/articles/3effccd39f4056
+
+## Features
+- ✅ Designed for Swift Concurrency and SwiftUI.
+- ✅ Compatible with all Apple platforms (iPhone, iPod touch, iPad, Mac, Apple TV, Apple Watch, Apple Vision Pro).
+- ✅ Automatically cancels the task and performs a new action on new user interaction.
+- ✅ Automatically cancels the task after the view disappears before the action completes.
+- ✅ Supports Sendable and inherits the Actor context.
+- ✅ No dependencies.
+
+## Samples
+```swift
+import AsyncSwiftUI
+
+struct ContentView: View {
+    @State private var isRunning = false
+    
+    var body: some View {
+        AsyncButton(isRunning ? "Running..." : "Run") {
+            isRunning = true
+            defer { isRunning = false }
+            do {
+                print("START")
+                try await Task.sleep(for: .seconds(2))
+            } catch {
+                print("ERROR:", error)
+            }
+            print("FINISH")
+        }
+        .disabled(isRunning)
+    }
+}
+```
+
+## Installation
+To use this library in a Swift Package Manager project, add the following line to the dependencies in your `Package.swift` file:
+
+```swift
+.package(url: "https://github.com/treastrain/AsyncSwiftUI", from: "0.1.0"),
+```
+
+Include `"AsyncSwiftUI"` as a dependency for your executable target:
+
+```swift
+.target(name: "<target>", dependencies: [
+    .product(name: "AsyncSwiftUI", package: "AsyncSwiftUI"),
+]),
+```
+
+Finally, add `import AsyncSwiftUI` to your source code (or replace the existing `import SwiftUI` with it).
+
+## Components
+
+### Controls and indicators
+
+| SwiftUI                                                              | AsyncSwiftUI  |
+|:---------------------------------------------------------------------|:--------------|
+| [`Button`](https://developer.apple.com/documentation/swiftui/button) | `AsyncButton` |
