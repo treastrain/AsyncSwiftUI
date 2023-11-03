@@ -12,9 +12,16 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "AsyncSwiftUI"),
+            name: "AsyncSwiftUI",
+            dependencies: [
+                "Control",
+            ]),
         .target(
             name: "Core"),
+        .target(
+            name: "Control",
+            dependencies: ["Core"]
+        ),
         .testTarget(
             name: "AsyncSwiftUITests",
             dependencies: ["AsyncSwiftUI"]),
