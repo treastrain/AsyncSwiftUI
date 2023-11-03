@@ -13,6 +13,8 @@ let package = Package(
     targets: [
         .target(
             name: "AsyncSwiftUI"),
+        .target(
+            name: "Core"),
         .testTarget(
             name: "AsyncSwiftUITests",
             dependencies: ["AsyncSwiftUI"]),
