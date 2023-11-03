@@ -66,3 +66,7 @@ Finally, add `import AsyncSwiftUI` to your source code (or replace the existing 
 | SwiftUI                                                              | AsyncSwiftUI  |
 |:---------------------------------------------------------------------|:--------------|
 | [`Button`](https://developer.apple.com/documentation/swiftui/button) | `AsyncButton` |
+
+## Note
+
+The documentation comments included in this library, with some exceptions, are from [the SwiftUI entry in the Apple Developer Documentation](https://developer.apple.com/documentation/swiftui).
