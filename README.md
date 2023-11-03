@@ -63,9 +63,36 @@ Finally, add `import AsyncSwiftUI` to your source code (or replace the existing 
 
 ### Controls and indicators
 
-| SwiftUI                                                              | AsyncSwiftUI  |
-|:---------------------------------------------------------------------|:--------------|
-| [`Button`](https://developer.apple.com/documentation/swiftui/button) | `AsyncButton` |
+| SwiftUI                                                                                              | AsyncSwiftUI  | Available on                                                                                      |
+|:-----------------------------------------------------------------------------------------------------|:--------------|:--------------------------------------------------------------------------------------------------|
+| [`Button`](https://developer.apple.com/documentation/swiftui/button)                                 | `AsyncButton` | iOS 15.0+, iPadOS 15.0+, macOS 12.0+, Mac Catalyst 15.0+, tvOS 15.0+, watchOS 8.0+, visionOS 1.0+ |
+| [`EditButton`](https://developer.apple.com/documentation/swiftui/editbutton)                         | (No need)     | ―                                                                                                 |
+| [`PasteButton`](https://developer.apple.com/documentation/swiftui/pastebutton)                       | 🚧             | ―<!-- iOS 16.0+, iPadOS 16.0+, macOS 12.0+, Mac Catalyst 16.0+, visionOS 1.0+                           --> |
+| [`RenameButton`](https://developer.apple.com/documentation/swiftui/renamebutton)                     | 🚧             | ―<!-- iOS 16.0+, iPadOS 16.0+, macOS 13.0+, Mac Catalyst 16.0+, tvOS 16.0+, watchOS 9.0+, visionOS 1.0+ --> |
+| [`Link`](https://developer.apple.com/documentation/swiftui/link)                                     | (No need)     | ―                                                                                                 |
+| [`ShareLink`](https://developer.apple.com/documentation/swiftui/sharelink)                           | (No need)     | ―                                                                                                 |
+| [`TextFieldLink`](https://developer.apple.com/documentation/swiftui/textfieldlink)                   | 🚧             | ―<!-- watchOS 9.0+                                                                                      --> |
+| [`HelpLink`](https://developer.apple.com/documentation/swiftui/helplink)                             | 🚧             | ―<!-- macOS 14.0+, visionOS 1.0+                                                                        --> |
+| [`Slider`](https://developer.apple.com/documentation/swiftui/slider)                                 | 🚧             | ―<!-- iOS 15.0+, iPadOS 15.0+, macOS 12.0+, Mac Catalyst 15.0+, watchOS 8.0+, visionOS 1.0+             --> |
+| [`Stepper`](https://developer.apple.com/documentation/swiftui/stepper)                               | 🚧             | ―<!-- iOS 15.0+, iPadOS 15.0+, macOS 12.0+, Mac Catalyst 15.0+, watchOS 9.0+, visionOS 1.0+             --> |
+| [`Toggle`](https://developer.apple.com/documentation/swiftui/toggle)                                 | 🚧             | ―<!-- iOS 15.0+, iPadOS 15.0+, macOS 12.0+, Mac Catalyst 15.0+, tvOS 15.0+, watchOS 8.0+, visionOS 1.0+ --> |
+| [`Picker`](https://developer.apple.com/documentation/swiftui/picker)                                 | (No need)     | ―                                                                                                 |
+| [`DatePicker`](https://developer.apple.com/documentation/swiftui/datepicker)                         | (No need)     | ―                                                                                                 |
+| [`MultiDatePicker`](https://developer.apple.com/documentation/swiftui/multidatepicker)               | (No need)     | ―                                                                                                 |
+| [`ColorPicker`](https://developer.apple.com/documentation/swiftui/colorpicker)                       | (No need)     | ―                                                                                                 |
+| [`Gauge`](https://developer.apple.com/documentation/swiftui/gauge)                                   | (No need)     | ―                                                                                                 |
+| [`ProgressView`](https://developer.apple.com/documentation/swiftui/progressview)                     | (No need)     | ―                                                                                                 |
+| [`ContentUnavailableView`](https://developer.apple.com/documentation/swiftui/contentunavailableview) | (No need)     | ―                                                                                                 |
+
+### Menus and commands
+
+| SwiftUI                                                                                              | AsyncSwiftUI  | Available on                                                                        |
+|:-----------------------------------------------------------------------------------------------------|:--------------|:------------------------------------------------------------------------------------|
+| [`Menu`](https://developer.apple.com/documentation/swiftui/menu)                                     | 🚧             | ―<!-- iOS 15.0+, iPadOS 15.0+, macOS 12.0+, Mac Catalyst 15.0+, tvOS 17.0+, visionOS 1.0+ --> |
+| [`MenuButton`](https://developer.apple.com/documentation/swiftui/menubutton)                         | (No need)     | ―                                                                                   |
+| [`PullDownButton`](https://developer.apple.com/documentation/swiftui/pulldownbutton)                 | (No need)     | ―                                                                                   |
+| [`CommandMenu`](https://developer.apple.com/documentation/swiftui/commandmenu)                       | (No need)     | ―                                                                                   |
+| [`CommandGroup`](https://developer.apple.com/documentation/swiftui/commandgroup)                     | (No need)     | ―                                                                                   |
 
 ## Note
 
