@@ -18,3 +18,16 @@ let package = Package(
             dependencies: ["AsyncSwiftUI"]),
     ]
 )
+
+package.targets.forEach {
+    $0.swiftSettings = [
+        .enableUpcomingFeature("ConciseMagicFile"), // SE-0274
+        .enableUpcomingFeature("ForwardTrailingClosures"), // SE-0286
+        .enableUpcomingFeature("ExistentialAny"), // SE-0335
+        .enableUpcomingFeature("StrictConcurrency"), // SE-0337
+        .enableUpcomingFeature("BareSlashRegexLiterals"), // SE-0354
+        .enableUpcomingFeature("ImportObjcForwardDeclarations"), // SE-0384
+        .enableUpcomingFeature("DisableOutwardActorInference"), // SE-0401
+        .enableUpcomingFeature("InternalImportsByDefault"), // SE-0409
+    ]
+}
