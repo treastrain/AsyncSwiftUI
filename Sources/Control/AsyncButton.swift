@@ -13,17 +13,18 @@ import SwiftUI
 @available(iOS 15.0, macOS 12.0, macCatalyst 15.0, tvOS 15.0, watchOS 8.0, visionOS 1.0, *)
 public struct AsyncButton<Label: View>: AsyncControl {
     public typealias Base = Button<Label>
+    package typealias Value = ()
     
     private let priority: TaskPriority
     private let action: @Sendable () async -> Void
-    private let base: (_ trigger: _AsyncControlTrigger?) -> Base
+    private let base: (_ trigger: _AsyncControlTrigger<Value>?) -> Base
     
-    @State private var trigger: _AsyncControlTrigger? = nil
+    @State private var trigger: _AsyncControlTrigger<Value>? = nil
     
     private init(
         priority: TaskPriority,
         @_inheritActorContext action: @escaping @Sendable () async -> Void,
-        base: @escaping (_ trigger: _AsyncControlTrigger?) -> Base
+        base: @escaping (_ trigger: _AsyncControlTrigger<Value>?) -> Base
     ) {
         self.priority = priority
         self.action = action
