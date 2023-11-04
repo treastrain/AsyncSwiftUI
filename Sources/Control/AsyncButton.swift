@@ -10,7 +10,7 @@ import SwiftUI
 
 /// A control that initiates an action.
 /// - SeeAlso: [`SwiftUI.Button`](https://developer.apple.com/documentation/swiftui/button)
-@available(iOS 15.0, macOS 12.0, macCatalyst 15.0, tvOS 15.0, watchOS 8.0, visionOS 1.0, *)
+@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, visionOS 1.0, *)
 public struct AsyncButton<Label: View>: AsyncControl {
     public typealias Base = Button<Label>
     package typealias Value = ()
@@ -43,7 +43,7 @@ public struct AsyncButton<Label: View>: AsyncControl {
     }
 }
 
-@available(iOS 15.0, macOS 12.0, macCatalyst 15.0, tvOS 15.0, watchOS 8.0, visionOS 1.0, *)
+@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, visionOS 1.0, *)
 extension AsyncButton {
     /// Creates a button that displays a custom label.
     ///
@@ -66,7 +66,7 @@ extension AsyncButton {
     }
 }
 
-@available(iOS 15.0, macOS 12.0, macCatalyst 15.0, tvOS 15.0, watchOS 8.0, visionOS 1.0, *)
+@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, visionOS 1.0, *)
 extension AsyncButton where Label == Text {
     /// Creates a button that generates its label from a localized string key.
     /// - Parameters:
@@ -108,7 +108,7 @@ extension AsyncButton where Label == Text {
     }
 }
 
-@available(iOS 15.0, macOS 12.0, macCatalyst 15.0, tvOS 15.0, watchOS 8.0, visionOS 1.0, *)
+@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, visionOS 1.0, *)
 extension AsyncButton where Label == SwiftUI.Label<Text, Image> {
     /// Creates a button that generates its label from a localized string key and system image name.
     /// - Parameters:
@@ -154,7 +154,7 @@ extension AsyncButton where Label == SwiftUI.Label<Text, Image> {
     }
 }
 
-@available(iOS 17.0, macOS 14.0, macCatalyst 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
+@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension AsyncButton where Label == SwiftUI.Label<Text, Image> {
     /// Creates a button that generates its label from a localized string key and image resource.
     /// - Parameters:
@@ -200,7 +200,7 @@ extension AsyncButton where Label == SwiftUI.Label<Text, Image> {
     }
 }
 
-@available(iOS 15.0, macOS 12.0, macCatalyst 15.0, tvOS 15.0, watchOS 8.0, visionOS 1.0, *)
+@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, visionOS 1.0, *)
 extension AsyncButton {
     /// Creates a button with a specified role that displays a custom label.
     /// - Parameters:
@@ -224,7 +224,7 @@ extension AsyncButton {
     }
 }
 
-@available(iOS 15.0, macOS 12.0, macCatalyst 15.0, tvOS 15.0, watchOS 8.0, visionOS 1.0, *)
+@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, visionOS 1.0, *)
 extension AsyncButton where Label == Text {
     /// Creates a button with a specified role that generates its label from a localized string key.
     /// - Parameters:
@@ -270,7 +270,7 @@ extension AsyncButton where Label == Text {
     }
 }
 
-@available(iOS 15.0, macOS 12.0, macCatalyst 15.0, tvOS 15.0, watchOS 8.0, visionOS 1.0, *)
+@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, visionOS 1.0, *)
 extension AsyncButton where Label == SwiftUI.Label<Text, Image> {
     /// Creates a button with a specified role that generates its label from a localized string key and a system image.
     /// - Parameters:
@@ -320,7 +320,7 @@ extension AsyncButton where Label == SwiftUI.Label<Text, Image> {
     }
 }
 
-@available(iOS 17.0, macOS 14.0, macCatalyst 17.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
+@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, visionOS 1.0, *)
 extension AsyncButton where Label == SwiftUI.Label<Text, Image> {
     /// Creates a button with a specified role that generates its label from a localized string key and an image resource.
     /// - Parameters:

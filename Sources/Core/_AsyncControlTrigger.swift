@@ -8,7 +8,7 @@
 import Foundation
 
 /// - Warning: This `Equatable` compliance is a dummy implementation added for use in `SwiftUI.View.onPreferenceChange(_:perform:)`.
-@available(iOS 15.0, macOS 12.0, macCatalyst 15.0, tvOS 15.0, watchOS 8.0, visionOS 1.0, *)
+@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, visionOS 1.0, *)
 package struct _AsyncControlTrigger<Value>: Equatable {
     private let action: (_ value: Value) -> Void
     
