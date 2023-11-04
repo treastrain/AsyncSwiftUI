@@ -12,7 +12,6 @@ import SwiftUI
 @available(watchOS 9.0, *)
 @available(iOS, unavailable)
 @available(macOS, unavailable)
-@available(macCatalyst, unavailable)
 @available(tvOS, unavailable)
 @available(visionOS, unavailable)
 public struct AsyncTextFieldLink<Label: View>: AsyncControl {
@@ -50,7 +49,6 @@ public struct AsyncTextFieldLink<Label: View>: AsyncControl {
 @available(watchOS 9.0, *)
 @available(iOS, unavailable)
 @available(macOS, unavailable)
-@available(macCatalyst, unavailable)
 @available(tvOS, unavailable)
 @available(visionOS, unavailable)
 extension AsyncTextFieldLink {
@@ -80,7 +78,6 @@ extension AsyncTextFieldLink {
 @available(watchOS 9.0, *)
 @available(iOS, unavailable)
 @available(macOS, unavailable)
-@available(macCatalyst, unavailable)
 @available(tvOS, unavailable)
 @available(visionOS, unavailable)
 extension AsyncTextFieldLink where Label == Text {
