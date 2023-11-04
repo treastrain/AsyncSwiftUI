@@ -8,6 +8,7 @@
 import Core
 import SwiftUI
 
+/// A control that requests text input from the user when pressed.
 @available(watchOS 9.0, *)
 @available(iOS, unavailable)
 @available(macOS, unavailable)
@@ -53,6 +54,13 @@ public struct AsyncTextFieldLink<Label: View>: AsyncControl {
 @available(tvOS, unavailable)
 @available(visionOS, unavailable)
 extension AsyncTextFieldLink {
+    /// Creates a TextFieldLink which when pressed will request text input from the user.
+    ///
+    /// - Parameters:
+    ///   - prompt: Text which describes the reason for requesting text input.
+    ///   - label: A view that describes the action of requesting text input.
+    ///   - priority: The task priority to use when creating the asynchronous task. The default priority is `userInitiated`.
+    ///   - onSubmit: An action to perform when text input has been accepted and dismissed.
     public init(
         prompt: Text? = nil,
         @ViewBuilder label: @escaping () -> Label,
@@ -76,6 +84,12 @@ extension AsyncTextFieldLink {
 @available(tvOS, unavailable)
 @available(visionOS, unavailable)
 extension AsyncTextFieldLink where Label == Text {
+    /// Creates a TextFieldLink which when pressed will request text input from the user.
+    /// - Parameters:
+    ///   - titleKey: A key for the TextFieldLink's localized title, that describes the purpose of requesting text input.
+    ///   - prompt: Text which describes the reason for requesting text input.
+    ///   - priority: The task priority to use when creating the asynchronous task. The default priority is `userInitiated`.
+    ///   - onSubmit: An action to perform when text input has been accepted and dismissed.
     public init(
         _ titleKey: LocalizedStringKey,
         prompt: Text? = nil,
@@ -91,6 +105,12 @@ extension AsyncTextFieldLink where Label == Text {
         )
     }
     
+    /// Creates a TextFieldLink which when pressed will request text input from the user.
+    /// - Parameters:
+    ///   - title: A string that describes the purpose of requesting text input.
+    ///   - prompt: Text which describes the reason for requesting text input.
+    ///   - priority: The task priority to use when creating the asynchronous task. The default priority is `userInitiated`.
+    ///   - onSubmit: An action to perform when text input has been accepted and dismissed.
     @_disfavoredOverload
     public init<S>(
         _ title: S,
